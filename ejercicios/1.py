@@ -3,7 +3,8 @@ myString = "Hola como estas"
 def guionizador(input):
     output = input.replace(" ","-")
     print(output)
+    return output
 
-guionizador(myString)
+output = guionizador(myString)
 
 
