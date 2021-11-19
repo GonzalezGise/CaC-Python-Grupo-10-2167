@@ -1,24 +1,16 @@
-def stringChanged():
+textoInput = str(input("Ingrese su texto: "))
+indiceInput = int(input("Ingrese índice: "))
+letterInput = str(input("Ingrese nueva letra: "))
 
-    textoNew = []
-    
-    stringUser = str(input("Ingrese su texto a modificar: "))
-    textoNew.append(stringUser)
-    
-    indiceString = int(input("ingrese el lugar del texto que quiere modificar: "))
+def ChangeLetterOfString(string,index,newLetter):
+    output = " "
+    for i in string[0:index-1]:
+        output += i
+    output += newLetter
+    for i in string[index+1:len(string)]:
+        output += i
+    print(output)
+    return output
 
-    letraReemplazar = str(input("Ingrese letra nueva: "))
-
-    print(stringUser)
-    print(indiceString)
-    print(letraReemplazar)
-
-    if indiceString <= len(stringUser):
-        stringUser[int(indiceString)] = stringUser.replace(letraReemplazar)
-        print(stringUser)
-    else:
-        print("El índice proporcionado no esta en el string")
-
-
-stringChanged()
+ChangeLetterOfString(textoInput,indiceInput,letterInput)
 
